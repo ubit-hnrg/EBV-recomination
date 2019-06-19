@@ -17,6 +17,7 @@ rrates_reference = pd.merge(mapp[['refCoord','trimmedCoord']],rrate.reset_index(
 rrates_reference.head()
 rrates_reference.set_index(['refCoord'],inplace = True)
 rrates_reference.drop(['trimmedCoord','trimmed_position'],1,inplace = True)
+rrates_reference.to_csv(output_path+'whole_rho_data_10Miter.csv', sep = '|')
 #rates_reference['Mean Rho/bp.'].plot()
 
 
